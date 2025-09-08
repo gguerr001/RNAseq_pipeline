@@ -52,10 +52,6 @@ snakemake -j 8 --use-conda --conda-frontend mamba --configfile config/config.yam
   - `heatmap_top50.pdf` – top 50 variable genes
   - `<case>_vs_<control>.tsv/.xlsx` – DE tables with LFC shrinkage where available
 
-## Customization tips
-- Change featureCounts to exon-level by `featureCounts.feature_type: exon`.
-- Add more contrasts by adding rows to `config/contrasts.csv`.
-- Add MultiQC? Create another rule and an env with `multiqc` and point it to `results/`.
 
 ## Reproducibility
 - Each rule runs in its own frozen conda env (`envs/*.yaml`).
@@ -64,4 +60,5 @@ snakemake -j 8 --use-conda --conda-frontend mamba --configfile config/config.yam
 ## Troubleshooting
 - **Trimmomatic adapters**: if `auto` fails, set an explicit path to `TruSeq3-PE.fa`.
 - **GTF attributes**: pipeline defaults to `gene_id`. Change in `config.yaml` if your GTF differs.
+
 - **Index**: If you already have an index, set `genome_fasta: ""` and `index_prefix` accordingly.
