@@ -53,12 +53,8 @@ snakemake -j 8 --use-conda --conda-frontend mamba --configfile config/config.yam
   - `<case>_vs_<control>.tsv/.xlsx` – DE tables with LFC shrinkage where available
 
 
-## Reproducibility
-- Each rule runs in its own frozen conda env (`envs/*.yaml`).
-- The provided Dockerfile pins Snakemake and Python; rule tools are solved per env.
-
 ## Troubleshooting
 - **Trimmomatic adapters**: if `auto` fails, set an explicit path to `TruSeq3-PE.fa`.
 - **GTF attributes**: pipeline defaults to `gene_id`. Change in `config.yaml` if your GTF differs.
-
 - **Index**: If you already have an index, set `genome_fasta: ""` and `index_prefix` accordingly.
+
