@@ -1,0 +1,7 @@
+sample,fq1,fq2,condition
+Mock12h_rep1,data/Mock12h_rep1_R1.fastq.gz,data/Mock12h_rep1_R2.fastq.gz,Mock12h
+Mock12h_rep2,data/Mock12h_rep2_R1.fastq.gz,data/Mock12h_rep2_R2.fastq.gz,Mock12h
+Mock12h_rep3,data/Mock12h_rep3_R1.fastq.gz,data/Mock12h_rep3_R2.fastq.gz,Mock12h
+Flavo12h_rep1,data/Flavo12h_rep1_R1.fastq.gz,data/Flavo12h_rep1_R2.fastq.gz,Flavo12h
+Flavo12h_rep2,data/Flavo12h_rep2_R1.fastq.gz,data/Flavo12h_rep2_R2.fastq.gz,Flavo12h
+Flavo12h_rep3,data/Flavo12h_rep3_R1.fastq.gz,data/Flavo12h_rep3_R2.fastq.gz,Flavo12h

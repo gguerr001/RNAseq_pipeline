@@ -1,0 +1,32 @@
+# Where to find sample sheet and contrasts
+samplesheet: config/samples.csv
+contrasts: config/contrasts.csv
+
+# Reference files (choose ONE approach)
+hisat2:
+  # Option A (recommended): provide FASTA to build index reproducibly inside the pipeline
+  genome_fasta: "ref/genome.fa"   # leave empty "" if you prefer Option B
+  index_prefix: "ref/index/genome"
+
+  # Option B: use an existing HISAT2 index you already have
+  # genome_fasta: ""
+  # index_prefix: "/path/to/your/hisat2/index/prefix"
+
+# Gene annotation
+gtf: ref/annotation.gtf
+
+# Trimming
+trimmomatic:
+  adapters: auto   # "auto" tries to locate conda’s TruSeq3-PE.fa; or point to ref/adapters/TruSeq3-PE.fa
+
+# featureCounts settings (mirrors your original script)
+featureCounts:
+  feature_type: transcript   # change to "exon" if you want exon-based gene counts
+  attribute: gene_id
+  extra: "-O"               # allow multi-overlap like your pipeline
+
+threads:
+  index: 8
+  trim: 8
+  align: 12
+  counts: 12

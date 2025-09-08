@@ -1,0 +1,13 @@
+name: r-deseq2
+channels: [conda-forge, bioconda, defaults]
+dependencies:
+  - r-base=4.3
+  - r-optparse
+  - r-data.table
+  - r-dplyr
+  - r-ggplot2
+  - r-pheatmap
+  - r-openxlsx
+  - bioconductor-deseq2
+  - bioconductor-apeglm
+  - r-stringr

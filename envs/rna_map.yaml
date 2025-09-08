@@ -1,0 +1,11 @@
+name: rna-map
+channels: [conda-forge, bioconda, defaults]
+dependencies:
+  - python=3.11
+  - pandas
+  - hisat2
+  - samtools
+  - subread          # featureCounts
+  - trimmomatic
+  - openjdk          # for Trimmomatic
+  - pigz
